@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var napySlider: NapySlider!
-    var napySlider2: NapySlider!
+    @objc var napySlider2: NapySlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +38,10 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func valueChanged(_ sender: NapySlider) {
+        print("value has changed to \(napySlider.handlePosition)")
     }
 }
 
